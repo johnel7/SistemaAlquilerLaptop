@@ -20,8 +20,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="<?php echo base_url();?>mantenimiento/choferes"><i class="fa fa-circle-o"></i> Choferes</a></li>
-                            <li><a href="<?php echo base_url();?>mantenimiento/vehiculos"><i class="fa fa-circle-o"></i> Vehiculos</a></li>
+                            <li><a href="<?php echo base_url();?>mantenimiento/laptops"><i class="fa fa-circle-o"></i>Laptop</a></li>
+                            <li><a href="<?php echo base_url();?>mantenimiento/prestamos"><i class="fa fa-circle-o"></i> Prestamo</a></li>
                             
                         </ul>
                     </li>
@@ -35,8 +35,8 @@
                         </a>
                         <ul class="treeview-menu">
 
-    <li><a href="#"><i class="fa fa-circle-o"></i>Choferes</a></li>
-    <li><a href="#"><i class="fa fa-circle-o"></i>Vehiculos</a></li>
+    <li><a href="#"><i class="fa fa-circle-o"></i>Laptop</a></li>
+    <li><a href="#"><i class="fa fa-circle-o"></i>Prestamo</a></li>
                             
                         </ul>
                     </li>
