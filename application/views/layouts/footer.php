@@ -43,16 +43,16 @@ $(document).ready(function () {
         buttons: [
             {
                 extend: 'excelHtml5',
-                title: "Listado de Choferes",
+                title: "Listado de Usuarios",
                 exportOptions: {
-                    columns: [ 0, 1,2, 3, 4, ]
+                    columns: [ 0, 1,2, 3,5, 6 ]
                 },
             },
             {
                 extend: 'pdfHtml5',
-                title: "Listado de Choferes",
+                title: "Listado de Usuarios",
                 exportOptions: {
-                    columns: [ 0, 1,2, 3, 4, ]
+                    columns: [ 0, 1,2, 3,5, 6 ]
                 }
                 
             }

@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-12">
                           <!--se envia a la funcion add del controlador -->
-                            <a href="<?php echo base_url();?>mantenimiento/laptops/add" class="btn btn-primary btn-flat"><span class="fa fa-plus">Agregar Laptop</span></a>
+                            <a href="<?php echo base_url();?>mantenimiento/laptops/add" class="btn btn-success btn-flat"><span class="fa fa-plus">Agregar Laptop</span></a>
                         </div>
                     </div>
                    <!--creando tabla de listado de todos los choferes-->

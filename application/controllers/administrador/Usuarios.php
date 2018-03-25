@@ -116,7 +116,13 @@ public function update(){
 
 
 
-
+//funcion para eliminar por id
+public function delete($id = NULL){
+    if($id != NULL){
+         $this->Usuarios_model->deleteUsuario($id);
+         redirect(base_url()."administrador/usuarios");
+    }
+  }
 
 
 

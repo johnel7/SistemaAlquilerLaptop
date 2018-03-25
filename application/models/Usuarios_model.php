@@ -30,5 +30,11 @@ public function update($id,$data){
 
 }
 
+public function deleteUsuario($id){
+     $this->db->where('idusu',$id);
+     $this->db->delete('usuario');
+  }
+
+
 
 }
