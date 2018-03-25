@@ -33,7 +33,7 @@
                               
                           <div class="form-group">
                             <label for="usuario">Usuario</label>
-                            <input type="text" class="form-control" id="idusuario" name="idusuario">
+                            <input type="text" class="form-control" id="idusuario" name="idusuario" value="<?php echo $this->session->userdata("username")?>" disabled="disabled">
                           </div>  
 
                           <div class="form-group">
@@ -43,7 +43,7 @@
                                   <!-- pasamos el idlaptop-->
                                    <input type="hidden" name="idlaptop" id="idlaptop">
 
-                                     <input type="text" class="form-control" disabled="disabled" id="laptop">
+                                    <input type="text" class="form-control" disabled="disabled" id="laptop">
                                          <span class="input-group-btn">
                                             <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-default" ><span class="fa fa-search"></span> Buscar</button>
                                         </span>

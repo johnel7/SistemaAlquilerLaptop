@@ -6,7 +6,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                Categoria
+                Panel Principal 
                 <small>Editar</small>
                 </h1>
             </section>

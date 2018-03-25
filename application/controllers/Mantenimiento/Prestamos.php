@@ -6,6 +6,8 @@ class Prestamos extends CI_Controller {
       public function __construct(){
       	parent::__construct();
       	$this->load->model("Prestamos_model");
+      	//vista de laptops
+      	$this->load->model("Laptop_model");
       }
 
 	public function index()
@@ -26,9 +28,13 @@ class Prestamos extends CI_Controller {
 //funcion para agregar nuevas laptops
 public function add(){
 
+	        $data = array(
+	        	           'tipolaptop' =>$this->Laptop_model->getLaptops() ,
+	        	            );
+
 	    $this->load->view('layouts/header');
 		$this->load->view('layouts/aside');
-		$this->load->view('admin/prestamos/add'); // se envia a la vista admin/laptops/add
+		$this->load->view('admin/prestamos/add',$data); // se envia a la vista admin/laptops/add
 		$this->load->view('layouts/footer');
 }
 
