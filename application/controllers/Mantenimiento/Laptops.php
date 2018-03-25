@@ -60,7 +60,48 @@ public function store(){
 }
 
 
+public function edit($id){
 
+        $data= array(
+
+          'laptop' => $this->Laptop_model->getLaptop($id),
+        );
+ 
+
+        $this->load->view('layouts/header');
+    $this->load->view('layouts/aside');
+    $this->load->view('admin/laptops/edit',$data); // se envia a la vista admin/laptops/add
+    $this->load->view('layouts/footer');
+}
+
+public function update(){
+
+          $idLaptop = $this->input->post("idLaptop");
+
+         $marca = $this->input->post("marca");
+         $modelo = $this->input->post("modelo");
+         $cantidad = $this->input->post("cantidad");
+         $estado = $this->input->post("estado");
+         
+
+         $data = array(
+                 
+                   'marca' =>$marca ,
+                   'modelo' =>$modelo, 
+                   'cantidad' =>$cantidad,
+                   'estado' =>$estado,
+                    
+                );
+
+      if($this->Laptop_model->update($idLaptop,$data)){
+                 redirect(base_url()."mantenimiento/laptops");     
+            }
+            else{
+                $this->session->set_flashdata("error","No se pudo actualizar los datos");
+                  redirect(base_url()."mantenimiento/laptops/edit/".$idLaptop);  
+            }
+
+}
 
 
 

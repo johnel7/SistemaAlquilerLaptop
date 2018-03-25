@@ -15,7 +15,18 @@ class Laptop_model extends CI_Model {
 
     }
 
+public function getLaptop($id){
+       
+       $this->db->where("idlap",$id);
+       $resultado = $this->db->get("laptop");
+       return $resultado->row();
+}
 
+public function update($id,$data){
+       $this->db->where("idlap",$id);
+      return $this->db->update("laptop",$data);
+
+}
 
 
 }
