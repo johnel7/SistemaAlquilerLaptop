@@ -104,7 +104,13 @@ public function update(){
 }
 
 
-
+//funcion para eliminar por id
+public function delete($id = NULL){
+    if($id != NULL){
+         $this->Laptop_model->deleteVehiculo($id);
+         redirect(base_url()."mantenimiento/laptops");
+    }
+  }
 
 
 

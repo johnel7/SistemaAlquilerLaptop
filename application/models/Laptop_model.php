@@ -28,5 +28,10 @@ public function update($id,$data){
 
 }
 
+public function deleteVehiculo($id){
+     $this->db->where('idlap',$id);
+     $this->db->delete('laptop');
+  }
+
 
 }
