@@ -21,4 +21,18 @@ class Prestamos_model extends CI_Model {
 
 
 
+public function getPrestamo($id){
+       
+       $this->db->where("idpres",$id);
+       $resultado = $this->db->get("prestamo");
+       return $resultado->row();
+}
+
+public function update($id,$data){
+       $this->db->where("idpres",$id);
+      return $this->db->update("prestamo",$data);
+
+}
+
+
 }
