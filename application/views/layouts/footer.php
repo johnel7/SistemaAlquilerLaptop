@@ -80,16 +80,16 @@ $('#example1').DataTable( {
         buttons: [
             {
                 extend: 'excelHtml5',
-                title: "Listado de Vehiculos",
+                title: "Listado de Laptop",
                 exportOptions: {
-                    columns: [ 0, 1,2, 3, 4, 5, 6 ]
+                    columns: [ 0, 1,2, 3, 4 ]
                 },
             },
             {
                 extend: 'pdfHtml5',
-                title: "Listado de Vehiculos",
+                title: "Listado de Laptop",
                 exportOptions: {
-                    columns: [ 0, 1,2, 3, 4, 5, 6 ]
+                    columns: [ 0, 1,2, 3, 4 ]
                 }
                 
             }

@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-12">
                           <!--se envia a la funcion add del controlador -->
-                            <a href="<?php echo base_url();?>mantenimiento/vehiculos/add" class="btn btn-primary btn-flat"><span class="fa fa-plus">Agregar Laptop</span></a>
+                            <a href="<?php echo base_url();?>mantenimiento/laptops/add" class="btn btn-primary btn-flat"><span class="fa fa-plus">Agregar Laptop</span></a>
                         </div>
                     </div>
                    <!--creando tabla de listado de todos los choferes-->
@@ -36,6 +36,7 @@
                                       <th>Modelo</th>
                                       <th>Cantidad</th>
                                       <th>Estado</th>
+                                      <th>Opciones</th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -47,7 +48,6 @@
                                       <td><?php echo $laptop->modelo;?></td>
                                       <td><?php echo $laptop->cantidad;?></td>
                                       <td><?php echo $laptop->estado;?></td>
-                                    
 
                                       <td>
                                           <div class="btn-group">
