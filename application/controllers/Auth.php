@@ -24,28 +24,27 @@ public function __construct(){
 
 	}
 
+
     public function login(){
-    	$username= $this->input->post("username");
-    	$password= $this->input->post("password");
-    	$res = $this->Usuarios_model->login($username,sha1($password));
-         
-         if(!$res){
-         	$this->session->set_flashdata("error","El usuario y/o contraseña son incorrectos");
-             redirect(base_url());
-         }
-         else{
-         	$data = array(
-         		           'idusu' => $idusu, 
-                            'username' => $username, 
-                            //'apellidos' => $apellidos, 
-                            'login' => TRUE 
-         		       );
-         	$this->session->set_userdata($data);
-         	redirect(base_url()."dashboard");
-         }
+		$username = $this->input->post("username");
+		$password = $this->input->post("password");
+		$res = $this->Usuarios_model->login($username, sha1($password));
 
-
-    }
+		if (!$res) {
+			$this->session->set_flashdata("error","El usuario y/o contraseña son incorrectos");
+			redirect(base_url());
+		}
+		else{
+			$data  = array(
+				'idusu' => $res->idusu, 
+				'username' => $res->username,
+				//'rol' => $res->rol_id,
+				'login' => TRUE
+			);
+			$this->session->set_userdata($data);
+			redirect(base_url()."dashboard");
+		}
+	}
 
 public function logout(){
 	$this->session->sess_destroy();

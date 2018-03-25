@@ -5,6 +5,12 @@ class Prestamos extends CI_Controller {
 
       public function __construct(){
       	parent::__construct();
+
+      	if (!$this->session->userdata("login")) {
+			redirect(base_url());
+		}
+
+
       	$this->load->model("Prestamos_model");
       	//vista de laptops
       	$this->load->model("Laptop_model");
@@ -15,6 +21,7 @@ class Prestamos extends CI_Controller {
 
 		$data = array(
 			          'prestamos' => $this->Prestamos_model->getPrestamos(),
+
 			           );
 
 
@@ -29,7 +36,8 @@ class Prestamos extends CI_Controller {
 public function add(){
 
 	        $data = array(
-	        	           'tipolaptop' =>$this->Laptop_model->getLaptops() ,
+	        	           'laptops' =>$this->Laptop_model->getLaptops() ,
+
 	        	            );
 
 	    $this->load->view('layouts/header');
@@ -41,24 +49,25 @@ public function add(){
 //funcion que recoge los valores del formulario de vista - add  
 public function store(){
          
-         $idlaptop = $this->input->post("idlaptop");
-		 $idusuario = $this->session->userdata("idusuario");
-
+         $idlap = $this->input->post("idlap");
+		 $idusu = $this->session->userdata("idusu");
+        
          $fecha_prestamo = $this->input->post("fecha_prestamo");
          $precio = $this->input->post("precio");
          $fecha_devolucion = $this->input->post("fecha_devolucion");
 
          $data = array(
          	       
-                   'idlaptop' =>$idlaptop ,
-                   'idusuario' =>$idusuario, 
+                   'idlap' =>$idlap ,
+                   'idusu' =>$idusu, 
+                   'precio' =>$precio, 
                    'fecha_prestamo' =>$fecha_prestamo,
                    'fecha_devolucion' =>$fecha_devolucion,
                     
          	      );
 
-          //se envia los datos al modelo Laptop_model
-            if($this->Laptop_model->save($data)){
+          //se envia los datos al modelo Prestamos_model
+            if($this->Prestamos_model->save($data)){
                  redirect(base_url()."mantenimiento/prestamos");     
             }
             else{
