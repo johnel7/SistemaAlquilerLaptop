@@ -13,4 +13,12 @@ class Prestamos_model extends CI_Model {
            return $query->result();
 	}
 
+
+ public function save($data){
+           return $this->db->insert("prestamo",$data);
+
+    }
+
+
+
 }
