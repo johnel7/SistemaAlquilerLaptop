@@ -2,7 +2,7 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 1.0
             </div>
-            <strong>Copyright &copy; 2018 <a href="https://adminlte.io">By johnel</a>.</strong> All rights
+            <strong>Copyright &copy; 2018 <a href="http://codemyn.blogspot.pe/">By johnel</a>.</strong> All rights
             reserved.
         </footer>
     </div>
@@ -112,7 +112,42 @@ $('#example1').DataTable( {
         }
     });
 
+$('#example2').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'excelHtml5',
+                title: "Listado de Prestamos",
+                exportOptions: {
+                    columns: [ 0, 1,2, 3, 4 ]
+                },
+            },
+            {
+                extend: 'pdfHtml5',
+                title: "Listado de Prestamos",
+                exportOptions: {
+                    columns: [ 0, 1,2, 3, 4 ]
+                }
+                
+            }
+        ],
 
+        language: {
+            "lengthMenu": "Mostrar _MENU_ registros por pagina",
+            "zeroRecords": "No se encontraron resultados en su busqueda",
+            "searchPlaceholder": "Buscar registros",
+            "info": "Mostrando registros de _START_ al _END_ de un total de  _TOTAL_ registros",
+            "infoEmpty": "No existen registros",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "search": "Buscar:",
+            "paginate": {
+                "first": "Primero",
+                "last": "Último",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            },
+        }
+    });
 
 
 
