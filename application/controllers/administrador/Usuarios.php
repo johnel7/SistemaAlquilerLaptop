@@ -31,23 +31,30 @@ public function add(){
 //funcion que recoge los valores del formulario de vista - add  
 public function store(){
          
-         $marca = $this->input->post("marca");
-         $modelo = $this->input->post("modelo");
-         $cantidad = $this->input->post("cantidad");
-         $estado = $this->input->post("estado");
+         $nombre = $this->input->post("nombre");
+         $apellidos = $this->input->post("apellidos");
+         $username = $this->input->post("username");
+         $password = $this->input->post("password");
+         $telefono = $this->input->post("telefono");
+         $fecha_registro = $this->input->post("fecha_registro");
+         $tipo = $this->input->post("tipo");
          
 
          $data = array(
          	       
-                   'marca' =>$marca ,
-                   'modelo' =>$modelo, 
-                   'cantidad' =>$cantidad,
-                   'estado' =>$estado,
+                   'nombre' =>$nombre ,
+                   'apellidos' =>$apellidos, 
+                   'username' =>$username,
+                   'password' => sha1($password),
+                   'telefono' =>$telefono,
+                   'fecha_registro' =>$fecha_registro,
+                   'tipo' =>$tipo,
+                   
                     
          	      );
 
           //se envia los datos al modelo Usuaarios_model
-            if($this->Laptop_model->save($data)){
+            if($this->Usuarios_model->save($data)){
                  redirect(base_url()."administrador/usuarios");     
             }
             else{
