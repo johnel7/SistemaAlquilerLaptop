@@ -20,7 +20,6 @@ class Prestamos_model extends CI_Model {
     }
 
 
-
 public function getPrestamo($id){
        
        $this->db->where("idpres",$id);
@@ -34,5 +33,9 @@ public function update($id,$data){
 
 }
 
+public function deletePrestamo($id){
+     $this->db->where('idpres',$id);
+     $this->db->delete('prestamo');
+  }
 
 }

@@ -8,7 +8,7 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MENU NAVEGACION</li>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo base_url();?>dashboard">
                             <i class="fa fa-home"></i> <span>Inicio</span>
                         </a>
                     </li>
@@ -35,8 +35,8 @@
                         </a>
                         <ul class="treeview-menu">
 
-                           <li><a href="#"><i class="fa fa-circle-o"></i>Laptop</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i>Prestamo</a></li>
+                           <li><a href="#"><i class="fa fa-circle-o"></i>Recaudacion del dia</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Laptop mas prestado</a></li>
                             
                         </ul>
                     </li>

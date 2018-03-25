@@ -122,7 +122,13 @@ public function update(){
 
 }
 
-
+//funcion para eliminar por id
+public function delete($id = NULL){
+    if($id != NULL){
+         $this->Prestamos_model->deletePrestamo($id);
+         redirect(base_url()."mantenimiento/prestamos");
+    }
+  }
 
 
 }
