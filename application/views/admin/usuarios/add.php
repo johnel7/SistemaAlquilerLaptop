@@ -65,7 +65,10 @@
 
                           <div class="form-group">
                             <label for="tipo">Tipo</label>
-                            <input type="text" class="form-control" id="tipo" name="tipo">
+                            <select name="tipo" class="form-control">
+                                <option>Administrador</option>
+                                <option>Cajero</option>
+                            </select>
                           </div> 
 
 

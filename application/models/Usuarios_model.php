@@ -17,4 +17,18 @@ class Usuarios_model extends CI_Model {
     }
 
 
+    public function getUsuario($id){
+       
+       $this->db->where("idusu",$id);
+       $resultado = $this->db->get("usuario");
+       return $resultado->row();
+}
+
+public function update($id,$data){
+       $this->db->where("idusu",$id);
+      return $this->db->update("usuario",$data);
+
+}
+
+
 }
