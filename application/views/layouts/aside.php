@@ -35,9 +35,23 @@
                         </a>
                         <ul class="treeview-menu">
 
-    <li><a href="#"><i class="fa fa-circle-o"></i>Laptop</a></li>
-    <li><a href="#"><i class="fa fa-circle-o"></i>Prestamo</a></li>
+                           <li><a href="#"><i class="fa fa-circle-o"></i>Laptop</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i>Prestamo</a></li>
                             
+                        </ul>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-user-circle-o"></i> <span>Administrador</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="<?php echo base_url();?>administrador/usuarios"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                            <li><a href="<?php echo base_url();?>administrador/permisos"><i class="fa fa-circle-o"></i> Permisos</a></li>
                         </ul>
                     </li>
                    
