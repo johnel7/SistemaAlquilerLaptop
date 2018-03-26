@@ -35,8 +35,8 @@
                         </a>
                         <ul class="treeview-menu">
 
-                           <li><a href="#"><i class="fa fa-circle-o"></i>Recaudacion del dia</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i>Laptop mas prestado</a></li>
+                           <li><a href="<?php echo base_url();?>reportes/reportesDia"><i class="fa fa-circle-o"></i>Recaudacion del dia</a></li>
+                        <li><a href="<?php echo base_url();?>reportes/reportesLaptop"><i class="fa fa-circle-o"></i>Laptop mas prestado</a></li>
                             
                         </ul>
                     </li>
